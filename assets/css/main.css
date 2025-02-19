@@ -771,7 +771,7 @@ section,
 --------------------------------------------------------------*/
 .hero {
   width: 100%;
-  min-height: 100vh;
+  min-height: 80vh;
   position: relative;
   padding: 80px 0;
   display: flex;
@@ -863,7 +863,7 @@ section,
 }
 
 /*--------------------------------------------------------------
-# Clients Section
+# Associations Section
 --------------------------------------------------------------*/
 .clients {
   padding: 20px 0;
@@ -880,7 +880,7 @@ section,
   padding: 20px 40px;
   max-width: 90%;
   transition: 0.3s;
-  opacity: 0.5;
+  opacity: 1;
   filter: grayscale(100);
 }
 
@@ -1332,7 +1332,7 @@ section,
 # Pricing Section
 --------------------------------------------------------------*/
 .pricing {
-  padding: 60px 0 120px 0;
+  padding: 60px 0 60px 0;
 }
 
 .pricing .section-title {
