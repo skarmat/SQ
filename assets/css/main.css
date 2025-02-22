@@ -36,7 +36,7 @@
   --nav-mobile-background-color: #ffffff; /* Used as the background color for mobile navigation menu */
   --nav-dropdown-background-color: #ffffff; /* Used as the background color for dropdown items that appear when hovering over primary navigation items */
   --nav-dropdown-color: #3a3939; /* Used for navigation links of the dropdown items in the navigation menu. */
-  --nav-dropdown-hover-color: #e84545; /* Similar to --nav-hover-color, this color is applied to dropdown navigation links when they are hovered over. */
+  --nav-dropdown-hover-color: #bb9457; /* Similar to --nav-hover-color, this color is applied to dropdown navigation links when they are hovered over. */
 }
 
 /* Color Presets - These classes override global colors when applied to any section or element, providing reuse of the sam color scheme. */
@@ -93,7 +93,7 @@ h6 {
 ------------------------------*/
 .php-email-form .error-message {
   display: none;
-  background: #df1529;
+  background: #bb9457;
   color: #ffffff;
   text-align: left;
   padding: 15px;
@@ -1335,148 +1335,117 @@ section,
 # Pricing Section
 --------------------------------------------------------------*/
 .pricing {
-  padding: 60px 0 60px 0;
+  margin: 0 40px;
+  padding: 0px 0 10px 0;
 }
 
 .pricing .section-title {
-  margin-bottom: 40px;
+  margin-bottom: 10px;
 }
 
-.pricing .pricing-item {
-  background-color: var(--surface-color);
-  box-shadow: 0 3px 20px -2px rgba(0, 0, 0, 0.1);
-  padding: 60px 40px;
-  height: 100%;
-  position: relative;
-  border-radius: 15px;
-}
-
-.pricing h3 {
-  font-weight: 600;
-  margin-bottom: 15px;
-  font-size: 20px;
-  text-align: center;
-}
-
-.pricing .icon {
-  margin: 30px auto 20px auto;
-  width: 70px;
-  height: 70px;
-  background: var(--accent-color);
-  border-radius: 50%;
+/* -------------------------------------------------------------
+# Pricing Table 
+-------------------------------------------------------------- */
+/* Toggle Header Styles */
+.toggle-header {
   display: flex;
   align-items: center;
-  justify-content: center;
-  transition: 0.3s;
-  transform-style: preserve-3d;
+  justify-content: space-between;
+  gap: 10px;
+  cursor: pointer;
+  padding: 15px;
+  background: #bb9457;
+  color: white;
+  border-radius: 5px;
+  margin: 20px 0;
+  transition: background 0.3s;
 }
 
-.pricing .icon i {
-  color: var(--background-color);
-  font-size: 28px;
-  transition: ease-in-out 0.3s;
-  line-height: 0;
+.toggle-header:hover {
+  background: rgba(36, 37, 38, 0.59);
 }
 
-.pricing .icon::before {
-  position: absolute;
-  content: "";
-  height: 86px;
-  width: 86px;
-  border-radius: 50%;
-  background: color-mix(in srgb, var(--accent-color), transparent 80%);
-  transition: all 0.3s ease-out 0s;
-  transform: translateZ(-1px);
+.arrow {
+  width: 0;
+  height: 0;
+  border-left: 6px solid transparent;
+  border-right: 6px solid transparent;
+  border-top: 8px solid white;
+  transition: transform 0.3s;
 }
 
-.pricing .icon::after {
-  position: absolute;
-  content: "";
-  height: 102px;
-  width: 102px;
-  border-radius: 50%;
-  background: color-mix(in srgb, var(--accent-color), transparent 90%);
-  transition: all 0.3s ease-out 0s;
-  transform: translateZ(-2px);
+.arrow.active {
+  transform: rotate(180deg);
 }
 
-.pricing h4 {
-  font-size: 48px;
-  color: var(--accent-color);
-  font-weight: 700;
-  font-family: var(--heading-font);
-  margin-bottom: 25px;
-  text-align: center;
+/* Table Container */
+.table-container {
+  overflow: hidden;
+  transition: max-height 0.3s ease-out;
+  max-height: 1000px; /* Adjust based on your table height */
 }
 
-.pricing h4 sup {
-  font-size: 28px;
+.table-container.collapsed {
+  max-height: 0;
 }
 
-.pricing h4 span {
-  color: color-mix(in srgb, var(--default-color), transparent 50%);
-  font-size: 18px;
-  font-weight: 400;
+/* Existing Table Styles (from previous answer) */
+.pricing-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 20px 0;
+  font-family: Arial, sans-serif;
 }
 
-.pricing ul {
-  padding: 20px 0;
-  list-style: none;
-  color: color-mix(in srgb, var(--default-color), transparent 20%);
+.pricing-table thead tr {
+  background-color: #457b9d;
+  color: white;
+}
+
+.pricing-table th {
+  padding: 15px;
   text-align: left;
-  line-height: 20px;
 }
 
-.pricing ul li {
-  padding: 10px 0;
-  display: flex;
-  align-items: center;
+.pricing-table td {
+  padding: 12px;
+  border-bottom: 1px solid #ddd;
 }
 
-.pricing ul i {
-  color: #059652;
-  font-size: 24px;
-  padding-right: 3px;
+.pricing-table tbody tr:nth-child(odd) {
+  background-color: #f8f9fa;
 }
 
-.pricing ul .na {
-  color: color-mix(in srgb, var(--default-color), transparent 70%);
+.pricing-table tbody tr:nth-child(even) {
+  background-color: rgba(36, 37, 38, 0.59);
+  color: white;
 }
 
-.pricing ul .na i {
-  color: color-mix(in srgb, var(--default-color), transparent 70%);
+.pricing-table tbody tr:hover {
+  background-color: rgba(133, 125, 75, 0.34);
+  color: white;
 }
 
-.pricing ul .na span {
-  text-decoration: line-through;
-}
+@media screen and (max-width: 600px) {
+  .pricing-table thead {
+    display: none;
+  }
 
-.pricing .buy-btn {
-  color: color-mix(in srgb, var(--default-color), transparent 20%);
-  display: inline-block;
-  padding: 8px 40px 10px 40px;
-  border-radius: 50px;
-  border: 1px solid color-mix(in srgb, var(--default-color), transparent 80%);
-  transition: none;
-  font-size: 16px;
-  font-weight: 600;
-  font-family: var(--heading-font);
-  transition: 0.3s;
-}
+  .pricing-table td {
+    display: block;
+    text-align: right;
+    padding-left: 50%;
+    position: relative;
+  }
 
-.pricing .buy-btn:hover {
-  background-color: var(--accent-color);
-  color: var(--contrast-color);
-}
-
-.pricing .featured {
-  z-index: 10;
-  border: 3px solid var(--accent-color);
-}
-
-@media (min-width: 992px) {
-  .pricing .featured {
-    transform: scale(1.15);
+  .pricing-table td::before {
+    content: attr(data-label);
+    position: absolute;
+    left: 0;
+    width: 50%;
+    padding-left: 15px;
+    text-align: left;
+    font-weight: bold;
   }
 }
 
