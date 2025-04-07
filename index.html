@@ -70,9 +70,12 @@
           href="index.html"
           class="logo d-flex align-items-center me-auto me-xl-0"
         >
-          <!-- Uncomment the line below if you also wish to use an image logo -->
-          <img src="assets/img/SQnewlogo.jpg" alt="" />
-          <!--  <h1 class="sitename">Star Quest</h1> -->
+          <img
+            src="assets/img/SQnewlogo.png"
+            alt="Star Quest Logo"
+            class="header-logo"
+          />
+          <h1 class="sitename">Star Quest</h1>
         </a>
 
         <nav id="navmenu" class="navmenu">
@@ -86,49 +89,42 @@
           </ul>
           <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
         </nav>
-
-        <a
-          class="btn-getstarted"
-          href="https://www.swiftbook.io/inst/#home?propertyId=601Nfa8xbO2YO0ZmXzg1ABSjqAKjaO1fKSTM0NDY=&JDRN=Y"
-          >Book Now</a
-        >
       </div>
     </header>
 
     <main class="main">
       <!-- Hero Section -->
       <section id="hero" class="hero section dark-background">
-        <img src="assets/img/heroSQ.jpeg" alt="" data-aos="fade-in" />
+        <div class="hero-slider">
+          <div class="slide active">
+            <img src="assets/img/heroSQ.jpeg" alt="" data-aos="fade-in" />
+          </div>
+          <div class="slide">
+            <img src="assets/img/heroSQ1.jpeg" alt="" data-aos="fade-in" />
+          </div>
+          <div class="slide">
+            <img src="assets/img/SQ10.jpg" alt="" data-aos="fade-in" />
+          </div>
+        </div>
 
         <div class="container">
           <div class="row">
             <div class="col-lg-10">
-              <h2 data-aos="fade-up" data-aos-delay="100">
+              <h2 data-aos="fade-up" data-aos-delay="100" class="hero-title">
                 Welcome to Star Quest Cottage
               </h2>
-              <p data-aos="fade-up" data-aos-delay="200">
+              <p data-aos="fade-up" data-aos-delay="200" class="hero-subtitle">
                 We Make Your Stay Memorable
               </p>
+              <div class="hero-buttons" data-aos="fade-up" data-aos-delay="300">
+                <a
+                  href="https://www.swiftbook.io/inst/#home?propertyId=601Nfa8xbO2YO0ZmXzg1ABSjqAKjaO1fKSTM0NDY=&JDRN=Y"
+                  class="btn btn-primary"
+                  >Book Now</a
+                >
+                <a href="#about" class="btn btn-outline-light">Explore More</a>
+              </div>
             </div>
-            <!-- <div class="col-lg-5" data-aos="fade-up" data-aos-delay="300">
-              <form
-                action="forms/newsletter.php"
-                method="post"
-                class="php-email-form"
-              >
-                <div class="sign-up-form">
-                  <input type="email" name="email" /><input
-                    type="submit"
-                    value="Subscribe"
-                  />
-                </div>
-                <div class="loading">Loading</div>
-                <div class="error-message"></div>
-                <div class="sent-message">
-                  Your subscription request has been sent. Thank you!
-                </div>
-              </form>
-            </div> -->
           </div>
         </div>
       </section>
@@ -387,7 +383,7 @@
             >
               <h3>Adventure & Authenticity</h3>
               <p>
-                Explore Ladakh’s wonders with exclusive adventure
+                Explore Ladakh's wonders with exclusive adventure
                 packages—double-humped camel rides, off-road trails, and
                 more—while savoring gourmet local and global cuisines.
               </p>
@@ -918,8 +914,8 @@
                       <p>
                         <i class="bi bi-quote quote-icon-left"></i>
                         <span
-                          >The staff’s attention to detail and the stunning
-                          location made our stay truly special. We can’t wait to
+                          >The staff's attention to detail and the stunning
+                          location made our stay truly special. We can't wait to
                           return!</span
                         >
                         <i class="bi bi-quote quote-icon-right"></i>
